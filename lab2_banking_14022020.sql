@@ -3,15 +3,15 @@ USE Banking_enterprise;
 CREATE TABLE Branch(
 	branch_name VARCHAR(20) NOT NULL,
 	branch_city VARCHAR(20) NOT NULL,
-    assets REAL NOT NULL,
-    PRIMARY KEY(branch_name));
+	assets REAL NOT NULL,
+	PRIMARY KEY(branch_name));
     
 CREATE TABLE BankAccount(
 	accno int(13) NOT NULL UNIQUE,
-    branch_name VARCHAR(20) NOT NULL,
-    balance REAL NOT NULL,
-    PRIMARY KEY(accno),
-    FOREIGN KEY(branch_name) REFERENCES Branch(branch_name));
+	branch_name VARCHAR(20) NOT NULL,
+	balance REAL NOT NULL,
+	PRIMARY KEY(accno),
+	FOREIGN KEY(branch_name) REFERENCES Branch(branch_name));
 
 CREATE TABLE BankCustomer(
 	customer_name VARCHAR(40) NOT NULL UNIQUE,
