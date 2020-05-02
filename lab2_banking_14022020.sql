@@ -15,22 +15,22 @@ CREATE TABLE BankAccount(
 
 CREATE TABLE BankCustomer(
 	customer_name VARCHAR(40) NOT NULL UNIQUE,
-    customer_street VARCHAR(30) NOT NULL,
-    customer_city VARCHAR(20) NOT NULL,
-    PRIMARY KEY(customer_name));
+	customer_street VARCHAR(30) NOT NULL,
+	customer_city VARCHAR(20) NOT NULL,
+	PRIMARY KEY(customer_name));
 
 CREATE TABLE Depositer(
 	customer_name VARCHAR(40) NOT NULL,
-    accno int(13) NOT NULL UNIQUE,
-    PRIMARY KEY(customer_name, accno),
-    FOREIGN KEY(customer_name) REFERENCES BankCustomer(customer_name),
-    FOREIGN KEY(accno) REFERENCES BankAccount(accno));
+	accno int(13) NOT NULL UNIQUE,
+	PRIMARY KEY(customer_name, accno),
+	FOREIGN KEY(customer_name) REFERENCES BankCustomer(customer_name),
+	FOREIGN KEY(accno) REFERENCES BankAccount(accno));
 
 CREATE TABLE Loan(
 	loan_number int(14) NOT NULL UNIQUE,
-    branch_name VARCHAR(20) NOT NULL,
-    amount REAL NOT NULL,
-    PRIMARY KEY(loan_number));
+	branch_name VARCHAR(20) NOT NULL,
+	amount REAL NOT NULL,
+	PRIMARY KEY(loan_number));
 
 INSERT INTO branch(branch_name, branch_city, assets) VALUES ("SBI_Chamarajpet", "Bangalore", 50000);
 INSERT INTO branch(branch_name, branch_city, assets) VALUES ("SBI_ResidencyRoad", "Bangalore", 10000), ("SBI_ShivajiRoad", "Bombay", 20000), ("SBI_ParliamentRoad", "Delhi", 10000), ("SBI_JantarMantar", "Delhi", 20000);
