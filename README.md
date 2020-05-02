@@ -1,7 +1,7 @@
 # DBMS LAB Queries
 
-[Lab1 Queries](https://github.com/harshit3012/dbms_lab/blob/master/lab1_insurance_07022020.sql)
-[Lab2 Queries](https://github.com/harshit3012/dbms_lab/blob/master/lab2_banking_14022020.sql)
+[Lab1 Queries](https://github.com/harshit3012/dbms_lab/blob/master/lab1_insurance_07022020.sql) - Insurance DB <lr />
+[Lab2 Queries](https://github.com/harshit3012/dbms_lab/blob/master/lab2_banking_14022020.sql) - Banking DB <lr />
 [Lab3 Queries](https://github.com/harshit3012/dbms_lab/blob/master/lab3_supplier_28022020.sql)
 [Lab4 Queries](https://github.com/harshit3012/dbms_lab/blob/master/lab4_studFac.sql)
 [Lab5 Queries](https://github.com/harshit3012/dbms_lab/blob/master/lab5_airline.sql)
