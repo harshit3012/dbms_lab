@@ -18,4 +18,4 @@
 
 [Lab9 Queries](https://github.com/harshit3012/dbms_lab/blob/master/lab9_movieDB.sql) - Movie
 
-[Lab10 Queries](https://github.com/harshit3012/dbms_lab/blob/master/lab10_collegeDB2.sql) - College, and Student Performance
+[Lab10 Queries](https://github.com/harshit3012/dbms_lab/blob/master/lab_10_collegeDB2.sql) - College, and Student Performance
