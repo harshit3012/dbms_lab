@@ -95,7 +95,7 @@ WHERE c.courseno=b.courseno)
 ORDER BY t.book_title;
 
 
-/*5.	List any department that has all its adopted books published by a specific publisher.*/
+/*5. List any department that has all its adopted books published by a specific publisher.*/
 
 SELECT DISTINCT c.dept
 FROM course c
