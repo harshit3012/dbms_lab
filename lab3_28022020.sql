@@ -2,21 +2,21 @@ CREATE DATABASE SUPPLIER;
 USE SUPPLIER;
 CREATE TABLE Supplier(
 	sid INT(5) NOT NULL UNIQUE,
-    sname VARCHAR(30) NOT NULL,
-    city VARCHAR(30) NOT NULL,
-    PRIMARY KEY(sid));
+	sname VARCHAR(30) NOT NULL,
+	city VARCHAR(30) NOT NULL,
+	PRIMARY KEY(sid));
 CREATE TABLE Parts(
 	pid INT(5) NOT NULL UNIQUE,
-    pname VARCHAR(30) NOT NULL,
-    color VARCHAR(20) NOT NULL,
-    PRIMARY KEY (pid));
+	pname VARCHAR(30) NOT NULL,
+	color VARCHAR(20) NOT NULL,
+	PRIMARY KEY (pid));
 CREATE TABLE Catalog(
 	sid INT(5) NOT NULL,
 	pid INT(5) NOT NULL,
 	cost INT(20) NOT NULL,
-    PRIMARY KEY(sid, pid),
-    FOREIGN KEY(sid) REFERENCES Supplier(sid) ON DELETE CASCADE,
-    FOREIGN KEY(pid) REFERENCES Parts(pid) ON DELETE CASCADE);
+	PRIMARY KEY(sid, pid),
+	FOREIGN KEY(sid) REFERENCES Supplier(sid) ON DELETE CASCADE,
+	FOREIGN KEY(pid) REFERENCES Parts(pid) ON DELETE CASCADE);
 INSERT INTO Supplier(sid, sname, city) VALUES (10001, "Acme Widget", "Bangalore");
 INSERT INTO Parts(pid, pname, color) VALUES (20001, "Book", "Red");
 INSERT INTO Supplier(sid, sname, city) VALUES (10002, "Johns", "Kolkata");
