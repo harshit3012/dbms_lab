@@ -20,12 +20,12 @@ CREATE TABLE BankCustomer(
     PRIMARY KEY(customer_name));
 
 CREATE TABLE Depositer(
-	customer_name VARCHAR(40) NOT NULL UNIQUE,
+	customer_name VARCHAR(40) NOT NULL,
     accno int(13) NOT NULL UNIQUE,
     PRIMARY KEY(customer_name, accno),
     FOREIGN KEY(customer_name) REFERENCES BankCustomer(customer_name),
     FOREIGN KEY(accno) REFERENCES BankAccount(accno));
-DROP TABLE Loan;
+
 CREATE TABLE Loan(
 	loan_number int(14) NOT NULL UNIQUE,
     branch_name VARCHAR(20) NOT NULL,
