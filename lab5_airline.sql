@@ -64,7 +64,7 @@ having count(*)>3;
 SELECT ename
 from employees
 where salary<(select min(price)
-				from flights
+from flights
                 where ffrom='Bangalore' and fto='Frankfurt');
                 
 /* iv.	For all aircraft with cruisingrange over 1000 Kms, find the name of the aircraft and the average salary of all pilots certified for this aircraft.*/
