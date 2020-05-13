@@ -44,6 +44,14 @@ WHERE not exists( SELECT pid FROM Parts
                     FROM Catalog
                     WHERE Catalog.sid=Supplier.sid);
 
+SELECT sname 
+FROM Supplier
+WHERE NOT exists(SELECT pid FROM Parts WHERE color='Red'
+		 NOT in
+		 (SELECT DISTINCT Catalog.pid 
+		  FROM Catalog , Parts
+		  WHERE Parts.pid=Catalog.pid and Parts.color='Red' and  Catalog.sid=Supplier.sid));
+
 SELECT DISTINCT SID
 FROM Catalog, Parts
 WHERE Catalog.pid=Parts.pid AND Parts.color="Red" OR Parts.color="Green";
