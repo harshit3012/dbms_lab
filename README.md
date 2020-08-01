@@ -1,4 +1,5 @@
 # DBMS LAB Queries
+## Harshit Hiremath 1BM18CS036
 
 [Lab1 Queries](https://github.com/harshit3012/dbms_lab/blob/master/lab1_insurance_07022020.sql) - Insurance
 
